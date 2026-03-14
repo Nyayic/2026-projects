@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Pricing Cards</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="pricing-container">
+
+        <h1 class="title">Our Pricing</h1>
+
+        <div class="toggle-container">
+        <span>Monthly</span>
+
+        <label class="switch">
+        <input type="checkbox" id="priceToggle">
+        <span class="slider"></span>
+        </label>
+
+        <span>Yearly</span>
+    </div>
+
+<div class="pricing-cards">
+
+    <div class="card">
+        <h2>Starter</h2>
+        <div class="price" data-month="19" data-year="190">$19</div>
+        <ul>
+            <li>5 Projects</li>
+            <li>10GB Storage</li>
+            <li>Email Support</li>
+        </ul>
+        <button>Choose Plan</button>
+    </div>
+
+<div class="card popular">
+    <div class="badge">Most Popular</div>
+    <h2>Professional</h2>
+    <div class="price" data-month="39" data-year="390">$39</div>
+
+    <ul>
+        <li>20 Projects</li>
+        <li>50GB Storage</li>
+        <li>Priority Support</li>
+    </ul>
+
+    <button>Choose Plan</button>
+</div>
+
+<div class="card">
+<h2>Enterprise</h2>
+<div class="price" data-month="79" data-year="790">$79</div>
+
+<ul>
+<li>Unlimited Projects</li>
+<li>200GB Storage</li>
+<li>24/7 Support</li>
+</ul>
+
+<button>Choose Plan</button>
+</div>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
