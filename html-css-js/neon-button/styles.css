@@ -1,0 +1,82 @@
+/* Dark page background — REQUIRED for neon to show */
+body {
+  background-color: #0a0a0f;
+  display:          flex;
+  align-items:      center;
+  justify-content:  center;
+  min-height:        100vh;
+}
+
+.btn-cyan   { --neon-color: #00ffe7; }
+.btn-pink   { --neon-color: #ff2d9b; }
+.btn-purple { --neon-color: #bf5fff; }
+.btn-yellow { --neon-color: #ffe600; }
+
+:root {
+  --neon-cyan: #00ffe7;   /* pick any bright, saturated hue */
+   --neon-color: #00ffe7; 
+}
+
+.btn {
+  padding:        14px 40px;
+  font-size:      1rem;
+  font-weight:    700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor:         pointer;
+  border:         none;
+  /* transparent bg */
+    background:  transparent;
+    color:       var(--neon-cyan);
+    border:      2px solid var(--neon-cyan);
+    border-radius: 4px; 
+
+    text-shadow: 0 0 8px  var(--neon-color),  0 0 20px var(--neon-color);  
+    /* box shadow */
+     box-shadow:
+    0 0 8px  var(--neon-color),             /* outer tight   */
+    0 0 20px var(--neon-color),             /* outer wide    */
+    inset 0 0 8px rgba(0,255,231,.1);   /* inner reflect */
+
+    /* transition */
+      transition: all .25s ease;   /* smooth every property change */
+
+    /* keyframe */
+      animation: neon-flicker 5s infinite;
+
+
+}
+
+.btn:hover {
+  background:  rgba(0, 255, 231, .1);   /* subtle tint fill */
+  transform:   scale(1.03);              /* slight lift      */
+  box-shadow:
+    0 0 12px var(--neon-color),
+    0 0 40px var(--neon-color),
+    0 0 80px rgba(0,255,231,.4),
+    inset 0 0 20px rgba(0,255,231,.15);
+  text-shadow:
+    0 0 8px  #fff,                   /* white-hot core on hover */
+    0 0 20px var(--neon-color),
+    0 0 40px var(--neon-color);
+}
+
+/* keyframes */
+@keyframes neon-flicker {
+  /* glow ACTIVE during most of the 5-second cycle */
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    box-shadow:
+      0 0 8px  var(--neon-color),
+      0 0 20px var(--neon-color),
+      0 0 50px rgba(0,255,231,.4),
+      inset 0 0 10px rgba(0,255,231,.1);
+    text-shadow:
+      0 0 8px  var(--neon-color),
+      0 0 20px var(--neon-color);
+  }
+  /* glow OFF — the actual flicker frames */
+  20%, 24%, 55% {
+    box-shadow:  none;
+    text-shadow: none;
+  }
+}
