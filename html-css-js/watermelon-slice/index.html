@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Watermelon Slice</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f5f5f5;
+    }
+
+    .watermelon {
+      position: relative;
+      width: 320px;
+      height: 160px;
+      background: #ff4d6d;
+      border-radius: 0 0 160px 160px;
+      overflow: hidden;
+      border-bottom: 18px solid #2e7d32;
+    }
+
+    .watermelon::before {
+      content: "";
+      position: absolute;
+      bottom: 18px;
+      left: 0;
+      width: 100%;
+      height: 14px;
+      background: #f8f8c8;
+    }
+
+    .seed {
+      position: absolute;
+      width: 12px;
+      height: 18px;
+      background: #222;
+      border-radius: 50% 50% 50% 50%;
+      transform: rotate(20deg);
+    }
+
+    /* Seed Positions */
+    .s1 { top: 45px; left: 60px; }
+    .s2 { top: 70px; left: 110px; }
+    .s3 { top: 45px; left: 155px; }
+    .s4 { top: 75px; left: 200px; }
+    .s5 { top: 50px; left: 245px; }
+  </style>
+</head>
+<body>
+
+  <div class="watermelon">
+    <div class="seed s1"></div>
+    <div class="seed s2"></div>
+    <div class="seed s3"></div>
+    <div class="seed s4"></div>
+    <div class="seed s5"></div>
+  </div>
+
+</body>
+</html>

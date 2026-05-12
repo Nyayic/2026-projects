@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cute CSS Coffee Cup</title>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #f8e8d8, #f2c9a1);
+    overflow: hidden;
+    font-family: sans-serif;
+  }
+
+  .scene {
+    position: relative;
+    width: 300px;
+    height: 350px;
+  }
+
+  /* Steam */
+  .steam {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+  }
+
+  .steam span {
+    width: 12px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    filter: blur(3px);
+    animation: steam 3s infinite ease-in-out;
+  }
+
+  .steam span:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+
+  .steam span:nth-child(3) {
+    animation-delay: 1s;
+  }
+
+  @keyframes steam {
+    0% {
+      transform: translateY(0) scaleX(1);
+      opacity: 0;
+    }
+
+    20% {
+      opacity: 1;
+    }
+
+    50% {
+      transform: translateY(-30px) scaleX(1.5);
+    }
+
+    100% {
+      transform: translateY(-80px) scaleX(2);
+      opacity: 0;
+    }
+  }
+
+  /* Cup */
+  .cup {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 140px;
+    background: #fff;
+    border-radius: 0 0 35px 35px;
+    box-shadow:
+      inset 0 -10px 0 rgba(0,0,0,0.05),
+      0 10px 25px rgba(0,0,0,0.15);
+  }
+
+  .cup::before {
+    content: "";
+    position: absolute;
+    top: -18px;
+    left: 0;
+    width: 180px;
+    height: 35px;
+    background: #fdfdfd;
+    border-radius: 50%;
+    box-shadow: inset 0 5px 0 rgba(0,0,0,0.05);
+  }
+
+  /* Coffee */
+  .coffee {
+    position: absolute;
+    top: -5px;
+    left: 10px;
+    width: 160px;
+    height: 25px;
+    background: #6f4e37;
+    border-radius: 50%;
+  }
+
+  /* Handle */
+  .handle {
+    position: absolute;
+    right: -38px;
+    top: 35px;
+    width: 60px;
+    height: 70px;
+    border: 10px solid #fff;
+    border-left: 10px solid transparent;
+    border-radius: 50%;
+  }
+
+  /* Cute Face */
+  .face {
+    position: absolute;
+    width: 100%;
+    top: 55px;
+    text-align: center;
+  }
+
+  .eye {
+    width: 12px;
+    height: 12px;
+    background: #333;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 18px;
+    animation: blink 4s infinite;
+  }
+
+  .mouth {
+    width: 28px;
+    height: 14px;
+    border-bottom: 4px solid #333;
+    border-radius: 0 0 20px 20px;
+    margin: 10px auto 0;
+  }
+
+  @keyframes blink {
+    0%, 45%, 100% {
+      transform: scaleY(1);
+    }
+
+    50% {
+      transform: scaleY(0.1);
+    }
+  }
+
+  /* Saucer */
+  .saucer {
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 240px;
+    height: 35px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+
+  .shadow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    height: 25px;
+    background: rgba(0,0,0,0.12);
+    border-radius: 50%;
+    filter: blur(8px);
+  }
+</style>
+</head>
+
+<body>
+<div class="scene">
+  <div class="steam">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="cup">
+    <div class="coffee"></div>
+
+    <div class="face">
+      <div>
+        <span class="eye"></span>
+        <span class="eye"></span>
+      </div>
+      <div class="mouth"></div>
+    </div>
+
+    <div class="handle"></div>
+  </div>
+
+  <div class="saucer"></div>
+  <div class="shadow"></div>
+
+</div>
+</body>
+</html>
