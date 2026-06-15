@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Markup Atelier | Build Your First Website in 30 Minutes</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#top" class="nav-brand">The Markup Atelier</a>
+      <ul class="nav-links">
+        <li><a href="#learn">What You Learn</a></li>
+        <li><a href="#preview">Code Preview</a></li>
+        <li><a href="#chapters">Chapters</a></li>
+        <li><a href="#instructor">Instructor</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========================
+       HERO
+  ======================== -->
+  <section class="hero" id="top">
+    <div class="container">
+      <span class="hero-eyebrow">Free Tutorial &middot; HTML &amp; CSS &middot; YouTube</span>
+      <h1>Build Your First Website<br />in <em>30 Minutes</em></h1>
+      <p class="hero-sub">
+        A hands-on beginner's guide to HTML and CSS.
+        No prior experience needed &mdash; just a text editor,
+        a browser, and half an hour.
+      </p>
+      <div class="hero-actions">
+        <a href="https://www.youtube.com/@thecodechic" target="_blank" rel="noopener" class="btn-primary">
+          Watch on YouTube
+        </a>
+        <span class="hero-note">Free to watch &middot; No sign-up required</span>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-value">30</span>
+          <span class="stat-label">Minutes</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">0</span>
+          <span class="stat-label">Experience needed</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">1</span>
+          <span class="stat-label">Real website built</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU WILL LEARN-->
+  <section class="learn-section" id="learn">
+    <div class="container">
+      <p class="section-eyebrow">The curriculum</p>
+      <h2 class="section-title">What You Will Learn</h2>
+      <p class="section-intro">
+        By the time the video ends, you will have written real code and
+        built a working webpage from scratch &mdash; not a template, not a
+        drag-and-drop tool. Yours.
+      </p>
+      <div class="learn-grid">
+        <div class="learn-card">
+          <span class="learn-card-num">01</span>
+          <h3>HTML Structure</h3>
+          <p>Learn what HTML tags are, how they wrap content, and how they form the skeleton of every single webpage on
+            the internet.</p>
+        </div>
+        <div class="learn-card">
+          <span class="learn-card-num">02</span>
+          <h3>CSS Styling</h3>
+          <p>Apply colors, fonts, and spacing using CSS. Understand how selectors work and how styles connect to your
+            HTML elements.</p>
+        </div>
+        <div class="learn-card">
+          <span class="learn-card-num">03</span>
+          <h3>Page Layout</h3>
+          <p>Arrange your content with a header, a main body section, and a footer so your page holds together as a
+            complete design.</p>
+        </div>
+        <div class="learn-card">
+          <span class="learn-card-num">04</span>
+          <h3>Publish Your Site</h3>
+          <p>Take your finished site live on the internet for free. Get a real URL in your browser, then share it with
+            anyone you like.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================
+       CODE PREVIEW
+  ======================== -->
+  <section class="code-section" id="preview">
+    <div class="container">
+      <div class="code-layout">
+
+        <div class="code-text">
+          <p class="section-eyebrow">A peek at the code</p>
+          <h2 class="section-title">This Is What You Will Write</h2>
+          <p class="section-intro">
+            Every line is written live, on screen, with an explanation
+            for why it exists. If you have never typed a tag before,
+            this is where you start.
+          </p>
+        </div>
+
+        <div class="code-window">
+          <div class="code-window-bar">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="code-file-label">index.html</span>
+          </div>
+          <div class="code-body">
+            <pre><span class="c-ln">1</span><span class="c-tag">&lt;!DOCTYPE</span> <span class="c-attr">html</span><span class="c-tag">&gt;</span>
+<span class="c-ln">2</span><span class="c-tag">&lt;html</span> <span class="c-attr">lang</span><span class="c-pun">=</span><span class="c-val">"en"</span> <span class="c-tag">&gt;</span>
+<span class="c-ln">3</span><span class="c-tag">&lt;head&gt;</span>
+<span class="c-ln">4</span><span class="c-tag">&lt;title&gt;</span><span class="c-text">My First Website</span><span class="c-tag">&lt;/title&gt;</span>
+<span class="c-ln">5</span><span class="c-tag">&lt;link</span> <span class="c-attr">rel</span><span class="c-pun">=</span><span class="c-val">"stylesheet"</span> <span class="c-attr">href</span><span class="c-pun">=</span> <span class="c-val">"style.css"</span><span class="c-tag">&gt;</span>
+<span class="c-ln">6</span><span class="c-tag">&lt;/head&gt;</span>
+<span class="c-ln">7</span><span class="c-tag">&lt;body&gt;</span>
+<span class="c-ln">8</span>
+<span class="c-ln">9</span><span class="c-cmt">&lt;!-- This is a comment --&gt;</span>
+<span class="c-ln">10</span><span class="c-tag">&lt;h1&gt;</span><span class="c-text">Hello, World!</span><span class="c-tag">&lt;/h1&gt;</span>
+<span class="c-ln">11</span><span class="c-tag">&lt;p&gt;</span><span class="c-text">I built this myself.</span><span class="c-tag">&lt;/p&gt;</span>
+<span class="c-ln">12</span>
+<span class="c-ln">13</span><span class="c-tag">&lt;/body&gt;</span>
+<span class="c-ln">14</span><span class="c-tag">&lt;/html&gt;</span></pre>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTERS -->
+  <section class="details-section" id="chapters">
+    <div class="container">
+      <div class="details-layout">
+
+        <div class="details-text">
+          <p class="section-eyebrow">About this tutorial</p>
+          <h2 class="section-title">Practical from the First Minute</h2>
+          <p>
+            This is not a theory lecture. You will open a text editor and
+            start writing real HTML before the five-minute mark. Every
+            concept is introduced only when it is needed, and every
+            decision is explained in plain, direct language.
+          </p>
+          <p>
+            By the final minute, you will have a real, working webpage you
+            built yourself &mdash; and a clear path for what to learn next.
+          </p>
+        </div>
+
+        <div>
+          <p class="chapter-list-title">Tutorial Chapters</p>
+          <ul class="chapter-list">
+            <li class="chapter-item">
+              <span class="chapter-time">0:00</span>
+              <div>
+                <p class="chapter-name">Introduction</p>
+                <p class="chapter-desc">What you will build and what tools you need</p>
+              </div>
+            </li>
+            <li class="chapter-item">
+              <span class="chapter-time">2:30</span>
+              <div>
+                <p class="chapter-name">Your First HTML File</p>
+                <p class="chapter-desc">Setting up the document and writing your first tags</p>
+              </div>
+            </li>
+            <li class="chapter-item">
+              <span class="chapter-time">10:00</span>
+              <div>
+                <p class="chapter-name">Adding Structure</p>
+                <p class="chapter-desc">Headings, paragraphs, images, and links</p>
+              </div>
+            </li>
+            <li class="chapter-item">
+              <span class="chapter-time">18:00</span>
+              <div>
+                <p class="chapter-name">Styling with CSS</p>
+                <p class="chapter-desc">Colors, fonts, spacing, and how selectors work</p>
+              </div>
+            </li>
+            <li class="chapter-item">
+              <span class="chapter-time">26:00</span>
+              <div>
+                <p class="chapter-name">Publishing Your Site</p>
+                <p class="chapter-desc">Making your finished website live on the internet</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTRUCTOR -->
+  <section class="instructor-section" id="instructor">
+    <div class="container">
+      <div class="instructor-inner">
+        <div class="instructor-avatar">FN</div>
+        <div class="instructor-info">
+          <p class="section-eyebrow">Your instructor</p>
+          <h2>Fanny Nyayic</h2>
+          <span class="instructor-handle">@thecodechic on YouTube</span>
+          <p>
+            Fanny is a freelance web developer and technical writer based
+            in Kampala, Uganda. She makes beginner-friendly tutorials on
+            HTML, CSS, JavaScript, and React &mdash; teaching concepts the
+            way she wished someone had explained them when she was just
+            starting out.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Build Your First Website?</h2>
+      <p>It takes 30 minutes. You will have a real, working site by the end of it.</p>
+      <a href="https://www.youtube.com/@thecodechic" target="_blank" rel="noopener" class="btn-primary">
+        Watch the Tutorial Now
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-brand">The Markup Atelier</span>
+        <span class="footer-text">A tutorial by Fanny Nyayic &middot; @thecodechic</span>
+        <span class="footer-text">Free to watch on YouTube</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
