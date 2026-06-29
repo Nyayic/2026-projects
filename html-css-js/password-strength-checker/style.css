@@ -1,0 +1,176 @@
+    * {
+        box-sizing: border-box;
+        /* padding and border included in width */
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #f5f5f5;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    /* ---------- CARD ---------- */
+    .card {
+        background: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        padding: 2rem;
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .card h1 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-bottom: 4px;
+    }
+
+    .card .subtitle {
+        font-size: 14px;
+        color: #888;
+        margin-bottom: 1.5rem;
+    }
+
+    /* ---------- INPUT WRAPPER ----------
+       We use position: relative so we can
+       place the eye button inside the input */
+    .input-wrapper {
+        position: relative;
+        margin-bottom: 1rem;
+    }
+
+    .input-wrapper input {
+        width: 100%;
+        padding: 10px 44px 10px 14px;
+        /* right padding leaves room for the eye icon */
+        font-size: 15px;
+        border: 1px solid #d0d0d0;
+        border-radius: 8px;
+        outline: none;
+        transition: border-color 0.2s;
+    }
+
+    .input-wrapper input:focus {
+        border-color: #378ADD;
+        /* highlight border on focus */
+    }
+
+    /* Eye button sits inside the input on the right */
+    .toggle-btn {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        color: #aaa;
+        padding: 4px;
+        line-height: 1;
+    }
+
+    .toggle-btn:hover {
+        color: #555;
+    }
+
+    /* ---------- STRENGTH BAR ----------
+       Four segments sit side by side.
+       Each segment's colour changes with JS. */
+    .strength-bar {
+        display: flex;
+        gap: 6px;
+        margin-bottom: 8px;
+    }
+
+    .segment {
+        flex: 1;
+        /* each segment takes equal width */
+        height: 6px;
+        border-radius: 99px;
+        background: #e0e0e0;
+        /* default grey */
+        transition: background 0.3s ease;
+    }
+
+    /* ---------- STRENGTH LABEL ---------- */
+    .strength-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.25rem;
+    }
+
+    #strengthLabel {
+        font-size: 13px;
+        font-weight: 600;
+        color: #aaa;
+        /* updated by JS */
+    }
+
+    #scoreDisplay {
+        font-size: 12px;
+        color: #aaa;
+    }
+
+    /* ---------- CRITERIA LIST ---------- */
+    .divider {
+        border: none;
+        border-top: 1px solid #efefef;
+        margin-bottom: 1rem;
+    }
+
+    .criteria-title {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: #aaa;
+        margin-bottom: 10px;
+    }
+
+    .criteria-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    /* One row in the criteria list */
+    .criterion {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        font-size: 13px;
+    }
+
+    .criterion .icon {
+        font-size: 16px;
+        flex-shrink: 0;
+    }
+
+    /* Colour classes toggled by JS */
+    .icon.met {
+        color: #639922;
+    }
+
+    /* green when the rule is satisfied */
+    .icon.unmet {
+        color: #ccc;
+    }
+
+    /* grey when not yet satisfied */
+
+    .criterion .label.met {
+        color: #1a1a1a;
+    }
+
+    .criterion .label.unmet {
+        color: #aaa;
+    }
